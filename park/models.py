@@ -25,4 +25,4 @@ class Vehicle(models.Model):
 
 class Space(models.Model):
     level = models.ForeignKey(Level, on_delete=CASCADE)
-    vehicle = models.OneToOneField(Vehicle, on_delete=CASCADE)
+    vehicle = models.OneToOneField(Vehicle, on_delete=CASCADE, null=True, blank=True)

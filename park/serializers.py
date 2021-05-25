@@ -34,7 +34,7 @@ class PrincingsSerializer(serializers.Serializer):
 
 
 class SpaceSerializer(serializers.Serializer):
-    id = serializers.IntegerField(read_only=True, required=False)
+    id = serializers.IntegerField(read_only=True)
     variety = serializers.CharField(required=False)
     level_name = serializers.CharField(required=False)
 
@@ -46,4 +46,4 @@ class VehiclesSerializer(serializers.Serializer):
     arrived_at = serializers.DateTimeField(required=False)
     paid_at = serializers.DateTimeField(required=False)
     amount_paid = serializers.IntegerField(required=False)
-    space = SpaceSerializer(required=False, default=None)
+    space = SpaceSerializer(required=False, default=None, allow_null=True)

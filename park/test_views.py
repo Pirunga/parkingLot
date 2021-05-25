@@ -63,7 +63,7 @@ class TestLevelCreateGetView(TestCase):
             "id": 1,
             "license_plate": "AYO1029",
             "vehicle_type": "car",
-            "arrived_at": datetime.now(timezone(offset=-timedelta(hours=3))),
+            "arrived_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "paid_at": None,
             "amount_paid": None,
             "space": {
