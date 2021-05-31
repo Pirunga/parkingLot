@@ -76,7 +76,7 @@ class TestLevelCreateGetView(TestCase):
         self.vehicle_out_data = {
             "license_plate": "AYO1029",
             "vehicle_type": "car",
-            "arrived_at": datetime.now(timezone(offset=-timedelta(hours=3))),
+            "arrived_at": self.vehicle_created_data["arrived_at"],
             "paid_at": datetime.now(timezone(offset=-timedelta(hours=3))),
             "amount_paid": 100,
             "space": None,
